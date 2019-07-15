@@ -40,12 +40,12 @@ def insertion_sort( arr ):
 
     return arr
 
-e = [1,5,2,1,1]
-k = [8,5,1,9,2]
-p = [9,8,1,3,2]
-print("Insertion sort", insertion_sort(e))
-print("Insertion sort", insertion_sort(k))
-print("Insertion sort", insertion_sort(p))
+# e = [1,5,2,1,1]
+# k = [8,5,1,9,2]
+# p = [9,8,1,3,2]
+# print("Insertion sort", insertion_sort(e))
+# print("Insertion sort", insertion_sort(k))
+# print("Insertion sort", insertion_sort(p))
 
 def selection_sort(arr):
     currIndex = 0
@@ -60,35 +60,38 @@ def selection_sort(arr):
 
     # step 4) continue steps 1-3 again, but finding the 2nd, 3rd, etc. shortest element in the array, and starting the search
     # on the next element in the array. 
+    if len(arr) == 0:
+        return arr
+    else:
 
-    while currIndex != (arrayLength - 1):
-        # print("currentIndex:", currIndex)
-        shortest = arr[currIndex]
-        shortestIndex = currIndex
+        while currIndex != (arrayLength - 1):
+            # print("currentIndex:", currIndex)
+            shortest = arr[currIndex]
+            shortestIndex = currIndex
 
-        for i in range(currIndex, len(arr)):
-            if arr[i] < shortest:
-                shortest = arr[i]
-                shortestIndex = i
+            for i in range(currIndex, len(arr)):
+                if arr[i] < shortest:
+                    shortest = arr[i]
+                    shortestIndex = i
 
-        # print(arr)
-        # print("compare", arr[currIndex], arr[currIndex+1] )
-     
-        previousNum = arr[currIndex]
-        nextNum = arr[shortestIndex]
+            # print(arr)
+            # print("compare", arr[currIndex], arr[currIndex+1] )
+         
+            previousNum = arr[currIndex]
+            nextNum = arr[shortestIndex]
 
-        arr[currIndex] = nextNum
-        arr[shortestIndex] = previousNum
+            arr[currIndex] = nextNum
+            arr[shortestIndex] = previousNum
 
-        currIndex += 1
-        # print("changed Array", arr)
+            currIndex += 1
+            # print("changed Array", arr)
 
-    return arr
+        return arr
 
-p = [5,1,3,9,7]
-em = [9,8,1,4,15]
-print("Selection sort", selection_sort(p))
-print("Selection sort", selection_sort(em))
+# p = [5,1,3,9,7]
+# em = [9,8,1,4,15]
+# print("Selection sort", selection_sort(p))
+# print("Selection sort", selection_sort(em))
 
 def bubble_sort(arr):
 
@@ -119,4 +122,4 @@ def bubble_sort(arr):
 
     return arr
 
-print("bubbleSort:", bubble_sort(em))
+# print("bubbleSort:", bubble_sort(em))
