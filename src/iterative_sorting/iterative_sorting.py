@@ -40,14 +40,14 @@ def insertion_sort( arr ):
 
     return arr
 
-# e = [1,5,2,1,1]
-# k = [8,5,1,9,2]
-# p = [9,8,1,3,2]
-# print(insertion_sort(e))
-# print(insertion_sort(k))
-# print(insertion_sort(p))
+e = [1,5,2,1,1]
+k = [8,5,1,9,2]
+p = [9,8,1,3,2]
+print("Insertion sort", insertion_sort(e))
+print("Insertion sort", insertion_sort(k))
+print("Insertion sort", insertion_sort(p))
 
-def insertion_sort(arr):
+def selection_sort(arr):
     currIndex = 0
     arrayLength = len(arr)
 
@@ -62,17 +62,17 @@ def insertion_sort(arr):
     # on the next element in the array. 
 
     while currIndex != (arrayLength - 1):
-        print("currentIndex:", currIndex)
+        # print("currentIndex:", currIndex)
         shortest = arr[currIndex]
         shortestIndex = currIndex
 
-        for i in range(currIndex, len(arr) - 1):
+        for i in range(currIndex, len(arr)):
             if arr[i] < shortest:
                 shortest = arr[i]
                 shortestIndex = i
 
-        print(arr)
-        print("compare", arr[currIndex], arr[currIndex+1] )
+        # print(arr)
+        # print("compare", arr[currIndex], arr[currIndex+1] )
      
         previousNum = arr[currIndex]
         nextNum = arr[shortestIndex]
@@ -81,14 +81,14 @@ def insertion_sort(arr):
         arr[shortestIndex] = previousNum
 
         currIndex += 1
-        print("changed Array", arr)
+        # print("changed Array", arr)
 
     return arr
 
-# p = [5,1,3,9,7]
+p = [5,1,3,9,7]
 em = [9,8,1,4,15]
-# print(insertion_sort(p))
-# print(insertion_sort(em))
+print("Selection sort", selection_sort(p))
+print("Selection sort", selection_sort(em))
 
 def bubble_sort(arr):
 
