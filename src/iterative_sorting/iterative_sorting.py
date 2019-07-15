@@ -51,6 +51,16 @@ def insertion_sort(arr):
     currIndex = 0
     arrayLength = len(arr)
 
+    # step 1) assume the shortest number is at the beginning of array.
+
+    # step 2) loop through the array to find a number shorter than the currently shortest number
+
+    # step 3) after finishing looping through the array for the first time, swap the item at the most leftmost element in the array
+    # with the shortest item, based on the location of the shortest item. 
+
+    # step 4) continue steps 1-3 again, but finding the 2nd, 3rd, etc. shortest element in the array, and starting the search
+    # on the next element in the array. 
+
     while currIndex != (arrayLength - 1):
         print("currentIndex:", currIndex)
         shortest = arr[currIndex]
