@@ -40,12 +40,12 @@ def insertion_sort( arr ):
 
     return arr
 
-e = [1,5,2,1,1]
-k = [8,5,1,9,2]
-p = [9,8,1,3,2]
-print(insertion_sort(e))
-print(insertion_sort(k))
-print(insertion_sort(p))
+# e = [1,5,2,1,1]
+# k = [8,5,1,9,2]
+# p = [9,8,1,3,2]
+# print(insertion_sort(e))
+# print(insertion_sort(k))
+# print(insertion_sort(p))
 
 def insertion_sort(arr):
     currIndex = 0
@@ -85,7 +85,38 @@ def insertion_sort(arr):
 
     return arr
 
-p = [5,1,3,9,7]
+# p = [5,1,3,9,7]
 em = [9,8,1,4,15]
-print(insertion_sort(p))
-print(insertion_sort(em))
+# print(insertion_sort(p))
+# print(insertion_sort(em))
+
+def bubble_sort(arr):
+
+    # bubble sort pseudocode
+
+    # step 1 ) start at index 0
+    # step 2 ) loop through array, compare next neighbor to current index
+    # step 3 ) swap if neighbors are in the wrong place. notify the system a swap has taken place (set swapped = true)
+    # step 4 ) at the end of the loop, if swapped is false, set continueSwapping = true 
+
+    continueSwapping = True 
+
+    while continueSwapping: 
+        swapped = False
+
+        for i in range(0, len(arr)-1):
+            if arr[i] > arr[i+1]:
+                nextItem = arr[i+1]
+                currItem = arr[i]
+
+                arr[i] = nextItem
+                arr[i+1] = currItem
+
+                swapped = True
+
+        if swapped == False:
+            continueSwapping = False
+
+    return arr
+
+print("bubbleSort:", bubble_sort(em))
