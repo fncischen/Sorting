@@ -47,13 +47,35 @@ print(insertion_sort(e))
 print(insertion_sort(k))
 print(insertion_sort(p))
 
-# TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
+def insertion_sort(arr):
+    currIndex = 0
+    arrayLength = len(arr)
+
+    while currIndex != (arrayLength - 1):
+        print("currentIndex:", currIndex)
+        shortest = arr[currIndex]
+        shortestIndex = currIndex
+
+        for i in range(currIndex, len(arr) - 1):
+            if arr[i] < shortest:
+                shortest = arr[i]
+                shortestIndex = i
+
+        print(arr)
+        print("compare", arr[currIndex], arr[currIndex+1] )
+     
+        previousNum = arr[currIndex]
+        nextNum = arr[shortestIndex]
+
+        arr[currIndex] = nextNum
+        arr[shortestIndex] = previousNum
+
+        currIndex += 1
+        print("changed Array", arr)
 
     return arr
 
-
-# STRETCH: implement the Count Sort function below
-def count_sort( arr, maximum=-1 ):
-
-    return arr
+p = [5,1,3,9,7]
+em = [9,8,1,4,15]
+print(insertion_sort(p))
+print(insertion_sort(em))
