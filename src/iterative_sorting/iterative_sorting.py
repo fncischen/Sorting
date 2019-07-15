@@ -19,7 +19,7 @@ def selection_sort( arr ):
             arr[cur_index] = smallerItem 
 
             if (arr[cur_index - 1] > arr[cur_index]) & (cur_index - 1  > 0):
-                for i in range(smallest_index,0):
+                for i in range(smallest_index,0,-1):
 
                     largerItem = arr[i]
                     smallerItem = arr[i-1]
@@ -31,8 +31,9 @@ def selection_sort( arr ):
     return arr
 
 e = [1,5,2,1,1]
+k = [8,5,1,9,2]
 print(selection_sort(e))
-
+print(selection_sort(k))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
