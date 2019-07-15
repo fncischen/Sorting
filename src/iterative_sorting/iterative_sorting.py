@@ -1,5 +1,5 @@
 # TO-DO: Complete the selection_sort() function below 
-def selection_sort( arr ):
+def insertion_sort( arr ):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
         # print("We are at index", i )
@@ -43,9 +43,9 @@ def selection_sort( arr ):
 e = [1,5,2,1,1]
 k = [8,5,1,9,2]
 p = [9,8,1,3,2]
-print(selection_sort(e))
-print(selection_sort(k))
-print(selection_sort(p))
+print(insertion_sort(e))
+print(insertion_sort(k))
+print(insertion_sort(p))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
