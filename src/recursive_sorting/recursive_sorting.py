@@ -9,15 +9,18 @@ def merge( arrA, arrB ):
     bIndex = 0
 
     while len(arrA) and len(arrB):
-        print(aIndex, bIndex)
+        # print(aIndex, bIndex)
         if arrA[aIndex] > arrB[bIndex]:
             merged_arr[i] = arrB[bIndex]
+            # merged_arr[i+1] = arrA[aIndex]
             arrB.pop(bIndex)
-            aIndex += 1 
+            # arrA.pop(aIndex)
         else:
             merged_arr[i] = arrA[aIndex]
+            # merged_arr[i+1] = arrB[bIndex]
             arrA.pop(aIndex)
-            bIndex += 1  
+            # arrB.pop(bIndex)
+        # i += 2
         i += 1
 
     if len(arrA):
@@ -68,12 +71,13 @@ def merge_sort( arr ):
         # Once all the folders have been reassembled, you order the folders correctly in the drawer. 
         mergedArr = merge(a1,a2)
 
-        return mergedArr
-
+        arr = mergedArr
+        # print(arr)
 
     return arr
 
 print(merge_sort([1,5,9,2,3,5]))
+print(merge_sort([9,3,1,8,4,5]))
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
